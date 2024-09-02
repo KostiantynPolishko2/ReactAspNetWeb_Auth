@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20240829_ReactAppAuth.Server", "20240829_ReactAppAuth.Server\20240829_ReactAppAuth.Server.csproj", "{8270910E-E47E-4318-8AEC-89B41FCC9DA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20240829_ReactAppAuth.Server", "20240829_ReactAppAuth.Server\20240829_ReactAppAuth.Server.csproj", "{8270910E-E47E-4318-8AEC-89B41FCC9DA1}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "20240829_reactappauth.client", "20240829_reactappauth.client\20240829_reactappauth.client.esproj", "{EABA4995-7D2D-46CB-83B5-38785EC8381F}"
 EndProject
@@ -14,12 +14,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8270910E-E47E-4318-8AEC-89B41FCC9DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8270910E-E47E-4318-8AEC-89B41FCC9DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8270910E-E47E-4318-8AEC-89B41FCC9DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8270910E-E47E-4318-8AEC-89B41FCC9DA1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EABA4995-7D2D-46CB-83B5-38785EC8381F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EABA4995-7D2D-46CB-83B5-38785EC8381F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EABA4995-7D2D-46CB-83B5-38785EC8381F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{EABA4995-7D2D-46CB-83B5-38785EC8381F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EABA4995-7D2D-46CB-83B5-38785EC8381F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EABA4995-7D2D-46CB-83B5-38785EC8381F}.Release|Any CPU.Deploy.0 = Release|Any CPU
