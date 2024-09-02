@@ -4,8 +4,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
+using _20240829_ReactAppAuth.Server.Models;
 
 namespace AuthJWTAspNetWeb.Controllers
 {
@@ -21,9 +23,9 @@ namespace AuthJWTAspNetWeb.Controllers
             _userManager = userManager; _roleManager = roleManager; _configuration = configuration; 
         } 
         
-        [HttpGet]
+        [HttpPost]
         [Route("login")] 
-        public async Task<IActionResult> Login([FromBody] LoginModel model) { 
+        public async Task<ActionResult<string>> Login([FromBody] LoginModel model) { 
             var user = await _userManager.FindByNameAsync(model.Username!);
             
             if (user != null && await _userManager.CheckPasswordAsync(user, model.Password!)) { 
@@ -33,9 +35,16 @@ namespace AuthJWTAspNetWeb.Controllers
                 foreach (var userRole in userRoles) { 
                     authClaims.Add(new Claim(ClaimTypes.Role, userRole)); 
                 } 
-                var token = GetToken(authClaims); 
+                var token = GetToken(authClaims);
 
-                return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token), expiration = token.ValidTo }); 
+                //return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token), expiration = token.ValidTo });
+
+                //var resp = new AuthorizationResponce
+                //{
+                //    AuthorizationToken = new JwtSecurityTokenHandler().WriteToken(token),
+                //};
+
+                return "token";
 
             } 
 
